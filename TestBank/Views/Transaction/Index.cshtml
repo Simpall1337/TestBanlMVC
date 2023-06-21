@@ -1,0 +1,37 @@
+﻿
+
+@{
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+      <title>Кнопки</title>
+      <link rel="stylesheet" type="text/css" href="cashStyle.css">
+      <link rel="stylesheet" href="~/css/cashStyle.css" asp-append-version="true" />
+    </head>
+
+    <body>
+      <div class="button-container">
+            <h1>Cash </h1>
+             
+          <form method="post" id="loginForm" action="takemoney">
+                <div class="button-group-1">
+                    <input class="number-button" type="submit" value="50" name="FieldName" style="width: 180px;height: 70px;margin: 25px;transition: 0.5s;cursor: pointer;color: white; font-size: 20px;background-color: #4caf50;border-color: rgba(255, 255, 255, 0);border-radius: 5px;" />
+                    <input class="number-button" type="submit" value="100" name="FieldName" style="width: 180px;height: 70px;margin: 25px;transition: 0.5s;cursor: pointer;color: white; font-size: 20px;background-color: #4caf50;border-color: rgba(255, 255, 255, 0);border-radius: 5px;" />
+                </div>
+                <div class="button-group-2">
+                    <input class="number-button" type="submit" value="200" name="FieldName" style="width: 180px;height: 70px;margin: 25px;transition: 0.5s;cursor: pointer;color: white; font-size: 20px;background-color: #4caf50;border-color: rgba(255, 255, 255, 0);border-radius: 5px;" />
+                </div>
+          </form>
+          <form method="post" id="loginForm" action="other">
+            <button class="other-button">Other amount</button>
+            </form>
+            <form method="post" id="loginForm" action="action">
+          <button class="other-button">Back</button>
+            </form>
+      </div>
+      <script src="indexCash.js"></script>
+    </body>
+
+    </html>
+}
