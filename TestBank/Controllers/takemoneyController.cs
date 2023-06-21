@@ -6,12 +6,18 @@ namespace TestBank.Controllers
 {
     public class takemoneyController : Controller
     {
+        private readonly OmegaDevelopmentContext _dbContext;
+
+        public takemoneyController(OmegaDevelopmentContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+
         public IActionResult Index(FormModel formData)
         {
             using (OmegaDevelopmentContext db = new OmegaDevelopmentContext())
             {
-                var users = db.Userdata.ToList();
-
+                var users = _dbContext.Userdata.ToList();
 
                 foreach (var user in users) 
                 {

@@ -7,14 +7,19 @@ namespace TestBank.Controllers
 {
     public class transactionController : Controller
     {
-        
-            public IActionResult Index(client cl)
+        private readonly OmegaDevelopmentContext _dbContext;
+
+        public transactionController(OmegaDevelopmentContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+        public IActionResult Index(client cl)
             {
                 using (OmegaDevelopmentContext db = new OmegaDevelopmentContext())
                 {
-                    var users = db.Userdata.ToList();
+                var users = _dbContext.Userdata.ToList();
 
-                    foreach (var user in users)
+                foreach (var user in users)
                     {
                     if (user.Pin == cl.Pin && clientController.name == user.Userlogin)
                         {

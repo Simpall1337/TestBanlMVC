@@ -7,12 +7,18 @@ namespace TestBank.Controllers
 {
     public class balanceController : Controller
     {
+        private readonly OmegaDevelopmentContext _dbContext;
+
+        public balanceController(OmegaDevelopmentContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
         public IActionResult Index(client cl)
         {
             using (OmegaDevelopmentContext db = new OmegaDevelopmentContext())
             {
-                var users = db.Userdata.ToList();
-
+                
+                var users = _dbContext.Userdata.ToList();
 
                 foreach (var user in users)
                 {
