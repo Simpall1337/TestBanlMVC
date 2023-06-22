@@ -18,8 +18,7 @@ namespace TestBank.Controllers
 
         public IActionResult Index(client cl)
         {
-            using (OmegaDevelopmentContext db = new OmegaDevelopmentContext())
-            {
+            
                // var users = db.Userdata.ToList();
                 name = cl.Userlogin;
                 var users = _dbContext.Userdata.ToList();
@@ -33,7 +32,7 @@ namespace TestBank.Controllers
                 }
 
                 return View();
-            }
+           
 
         }
     }

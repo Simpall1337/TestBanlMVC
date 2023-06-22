@@ -10,7 +10,6 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<OmegaDevelopmentContext>();
 
-//builder.Services.AddScoped<IDbContext, MyDbContext>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,8 +34,4 @@ app.MapControllerRoute(
 
 app.Run();
 
-class myclass
-{
-
-}
 

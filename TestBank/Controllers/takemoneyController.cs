@@ -15,8 +15,7 @@ namespace TestBank.Controllers
 
         public IActionResult Index(FormModel formData)
         {
-            using (OmegaDevelopmentContext db = new OmegaDevelopmentContext())
-            {
+           
                 var users = _dbContext.Userdata.ToList();
 
                 foreach (var user in users) 
@@ -29,7 +28,7 @@ namespace TestBank.Controllers
 
                 
                 return Redirect("NotMoney");
-            }
+            
         }
     }
 }
